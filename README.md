@@ -9,11 +9,32 @@ npm install ob-scan-ts
 ```
 
 ## Usage
+### Nested object to typescript types
 ```ts
 import { DotNestedKeys } from "ob-scan-ts";
 
 const obj = { foo: { bar: 123, baz: 456 } };
 type NestedKeys = DotNestedKeys<typeof obj>; // "foo.bar" | "foo.baz"
+```
+
+### JSON to typescript types ( i18n use case )
+```ts
+import * as en from "en.json"
+
+type TranslateKey = DotNestedKeys<typeof en>
+
+
+// use TranslateKey for create a custom hook
+export const useAppTranslate = () => {
+  const { t: tOrigin } = useTranslation();
+
+  const t = (key: TranslationKeys) => tOrigin(key);
+  return {
+    t,
+  };
+};
+
+export default i18n;
 ```
 
 ## API
