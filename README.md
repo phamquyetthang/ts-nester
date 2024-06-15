@@ -53,6 +53,32 @@ const obj = { foo: { bar: 123, baz: 456 } };
 type NestedKeys = DotNestedKeys<typeof obj>; // "foo.bar" | "foo.baz"
 ```
 
+### ```ChildItemType<T, key>```
+#### Example
+```ts
+  // Example usage
+interface Obj {
+  foo: string[];
+  bar: { baz: number };
+  baz: Array<{id: number, name: string}>;
+}
+type FooItem = ChildItemType<Obj, "foo"> // string
+type BarItem = ChildItemType<Obj, "bar"> // { baz: number }
+type BazItem = ChildItemType<Obj, "baz"> // { id: number, name: string }
+```
+
+### ```ChildType<T, key>```
+#### Example
+```ts
+// Example usage
+interface Obj {
+  foo: string[];
+  bar: { baz: number };
+}
+type FooItem = ChildType<Obj, "foo"> // string[]
+type BarItem = ChildType<Obj, "bar"> // { baz: number }
+```
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have any suggestions, please open an issue or submit a pull request.

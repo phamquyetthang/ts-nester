@@ -1,5 +1,9 @@
-import { DotNestedKeys } from "./dotNestedKey";
+import { DotNestedKeys } from "./utils/dotNestedKey";
+
+import { ChildItemType, ChildType } from "./utils/childType";
 
 export {
-  DotNestedKeys
+  DotNestedKeys,
+  ChildItemType,
+  ChildType
 }
