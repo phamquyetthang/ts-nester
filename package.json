@@ -1,6 +1,6 @@
 {
   "name": "ob-scan-ts",
-  "version": "1.0.2",
+  "version": "1.0.2-a",
   "description": "Nested object to typescript interface",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
