@@ -1,7 +1,7 @@
 {
-  "name": "ob-scan-ts",
+  "name": "ts-nester",
   "version": "1.0.2",
-  "description": "Nested object to typescript interface",
+  "description": "A TypeScript utility for converting nested JSON objects into TypeScript interfaces, optimized for i18n applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -10,18 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/phamquyetthang/ob-scan-ts.git"
+    "url": "git+ssh://git@github.com/phamquyetthang/ts-nester.git"
   },
   "keywords": [
     "typescript",
-    "json-to-ts"
+    "json-to-ts",
+    "interface-generator",
+    "i18n",
+    "typescript-utilities",
+    "json-interfaces"
   ],
   "author": "phamquyetthang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/phamquyetthang/ob-scan-ts/issues"
+    "url": "https://github.com/phamquyetthang/ts-nester/issues"
   },
-  "homepage": "https://github.com/phamquyetthang/ob-scan-ts#readme",
+  "homepage": "https://github.com/phamquyetthang/ts-nester#readme",
   "devDependencies": {
     "typescript": "^5.4.5"
   },
