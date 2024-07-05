@@ -1,5 +1,8 @@
 # ob-scan-ts
 
+> [!IMPORTANT]
+> This package has been renamed to ts-nester with more features
+
 Nested object to typescript interface
 
 ## Installation
