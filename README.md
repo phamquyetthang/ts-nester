@@ -1,4 +1,5 @@
-# ob-scan-ts
+# ts-nester
+![NPM Version](https://img.shields.io/npm/v/ts-nester)
 
 A TypeScript utility for converting nested JSON objects into TypeScript interfaces, optimized
 
