@@ -6,8 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "prepare": "husky"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -31,17 +30,11 @@
     "@eslint/js": "^9.6.0",
     "eslint": "9.x",
     "globals": "^15.8.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
     "prettier": "3.3.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.16.0"
   },
   "dependencies": {
     "@types/node": "^20.14.2"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "**/*.{ts}": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix ."
   }
 }
