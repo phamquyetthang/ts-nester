@@ -12,23 +12,23 @@ A TypeScript utility for converting nested JSON objects into TypeScript interfac
 
 ## Installation
 
-Install `ob-scan-ts`
+Install `ts-nester`
 
 ```bash
-npm install ob-scan-ts
+npm install ts-nester
 ```
 
 Or using yarn:
 
 ```bash
-yarn add ob-scan-ts
+yarn add ts-nester
 ```
 ## Usage
 
 ### Converting Nested Objects to TypeScript Types
 
 ```ts
-import { DotNestedKeys } from "ob-scan-ts";
+import { DotNestedKeys } from "ts-nester";
 
 const obj = { foo: { bar: 123, baz: 456 } };
 type NestedKeys = DotNestedKeys<typeof obj>; // "foo.bar" | "foo.baz"
