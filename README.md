@@ -1,4 +1,5 @@
 # ts-nester
+[![ESLint](https://github.com/phamquyetthang/ts-nester/actions/workflows/eslint.yml/badge.svg)](https://github.com/phamquyetthang/ts-nester/actions/workflows/eslint.yml)
 [![NPM Version](https://img.shields.io/npm/v/ts-nester)](https://www.npmjs.com/package/ts-nester)
 
 A TypeScript utility for converting nested JSON objects into TypeScript interfaces, optimized
