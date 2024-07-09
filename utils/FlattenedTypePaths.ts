@@ -1,4 +1,4 @@
-import { DotNestedKeys } from "./dotNestedKey";
+import { DotNestedKeys } from './dotNestedKey';
 
 /**
  * Generates a flattened representation of an object's type structure, mapping each nested path to its corresponding value type.
@@ -24,7 +24,6 @@ export type FlattenedTypePaths<T> = {
     : never;
 };
 
-
 /**
  * Recursively generates a flattened representation of an object's type structure, mapping each nested path to its corresponding value type up to a specified depth.
  * This utility type iterates over each key in the object, and for objects at each level, it recursively applies itself to flatten the structure.
@@ -46,17 +45,18 @@ export type FlattenedTypePaths<T> = {
  *     }
  *   }
  * };
- * 
+ *
  * // Flatten up to depth 2
  * type ResultDepth2 = DeepFlattenedTypePaths<typeof example, 2>;
  * // Expected type: { 'b.c': number, 'b.d': number, 'b.e': { f: number, g: { k: number, l: string } } }
- * 
+ *
  * // Flatten up to depth 3
  * type ResultDepth3 = DeepFlattenedTypePaths<typeof example, 3>;
  * // Expected type: { 'b.c': number, 'b.d': number, 'b.e.f': number, 'b.e.g.k': number, 'b.e.g.l': string }
  */
 export type DeepFlattenedTypePaths<T, Depth extends number> = Depth extends 0
-  ? {}
+  ? // eslint-disable-next-line @typescript-eslint/ban-types
+    {}
   : {
       [K in keyof T]: T[K] extends object
         ? {
@@ -74,26 +74,28 @@ export type DeepFlattenedTypePaths<T, Depth extends number> = Depth extends 0
         ? {
             [K in keyof T]: T[K];
           }
-        : {});
+        : // eslint-disable-next-line @typescript-eslint/ban-types
+          {});
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type Subtract<N extends number, M extends number> = N extends 1
   ? 0
   : N extends 2
-  ? 1
-  : N extends 3
-  ? 2
-  : N extends 4
-  ? 3
-  : N extends 5
-  ? 4
-  : N extends 6
-  ? 5
-  : N extends 7
-  ? 6
-  : N extends 8
-  ? 7
-  : N extends 9
-  ? 8
-  : N extends 10
-  ? 9
-  : never;
+    ? 1
+    : N extends 3
+      ? 2
+      : N extends 4
+        ? 3
+        : N extends 5
+          ? 4
+          : N extends 6
+            ? 5
+            : N extends 7
+              ? 6
+              : N extends 8
+                ? 7
+                : N extends 9
+                  ? 8
+                  : N extends 10
+                    ? 9
+                    : never;

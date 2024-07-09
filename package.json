@@ -1,12 +1,13 @@
 {
   "name": "ts-nester",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A TypeScript utility for converting nested JSON objects into TypeScript interfaces, optimized for i18n applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,20 @@
   },
   "homepage": "https://github.com/phamquyetthang/ts-nester#readme",
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "@eslint/js": "^9.6.0",
+    "eslint": "9.x",
+    "globals": "^15.8.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.16.0"
   },
   "dependencies": {
     "@types/node": "^20.14.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.{ts}": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix ."
   }
 }

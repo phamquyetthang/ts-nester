@@ -17,9 +17,9 @@
  * type BarItem = ChildItemType<Obj, "bar"> // { baz: number }
  * type BazItem = ChildItemType<Obj, "baz"> // { id: number, name: string }
  */
-export type ChildItemType<T, key extends keyof T> = T[key] extends Array<any> ? T[key][number] : T[key];
-
-
+export type ChildItemType<T, key extends keyof T> =
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  T[key] extends Array<any> ? T[key][number] : T[key];
 
 /**
  * The type of the child.
@@ -38,4 +38,3 @@ export type ChildItemType<T, key extends keyof T> = T[key] extends Array<any> ? 
  * type BarItem = ChildType<Obj, "bar"> // { baz: number }
  */
 export type ChildType<T, key extends keyof T> = T[key];
-
