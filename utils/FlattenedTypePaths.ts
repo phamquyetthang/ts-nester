@@ -62,10 +62,10 @@ export type DeepFlattenedTypePaths<T, Depth extends number> = Depth extends 0
         ? {
             [P in keyof DeepFlattenedTypePaths<
               T[K],
-              Subtract<Depth, 1>
+              Subtract<Depth>
             > as `${string & K}.${string & P}`]: DeepFlattenedTypePaths<
               T[K],
-              Subtract<Depth, 1>
+              Subtract<Depth>
             >[P];
           }
         : never;
@@ -77,8 +77,7 @@ export type DeepFlattenedTypePaths<T, Depth extends number> = Depth extends 0
         : // eslint-disable-next-line @typescript-eslint/ban-types
           {});
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-type Subtract<N extends number, M extends number> = N extends 1
+type Subtract<N extends number> = N extends 1
   ? 0
   : N extends 2
     ? 1
