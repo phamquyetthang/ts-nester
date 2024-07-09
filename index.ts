@@ -6,7 +6,7 @@ import {
   FlattenedTypePaths,
 } from "./utils/FlattenedTypePaths";
 
-export {
+export type {
   DotNestedKeys,
   ChildItemType,
   ChildType,

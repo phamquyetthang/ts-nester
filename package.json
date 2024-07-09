@@ -1,6 +1,6 @@
 {
   "name": "ts-nester",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A TypeScript utility for converting nested JSON objects into TypeScript interfaces, optimized for i18n applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
