@@ -39,7 +39,7 @@ type NestedKeys = DotNestedKeys<typeof obj>; // "foo.bar" | "foo.baz"
 ```ts
 import * as en from "en.json";
 
-type TranslateKey = DotNestedKeys<typeof en>;
+type TranslationKeys = DotNestedKeys<typeof en>;
 
 // Example of creating a custom hook for translation
 export const useAppTranslate = () => {
